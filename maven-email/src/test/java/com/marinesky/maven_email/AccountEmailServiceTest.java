@@ -25,7 +25,7 @@ public class AccountEmailServiceTest
         throws Exception
     {
         greenMail = new GreenMail( ServerSetup.SMTP );
-        greenMail.setUser( "marineskyliu@gmail.com", "marinesky549400987" );
+        greenMail.setUser( "yourgmail@gmail.com", "password" );
         greenMail.start();
     }
 
@@ -38,7 +38,7 @@ public class AccountEmailServiceTest
 
         String subject = "Test Subject";
         String htmlText = "<h3>Test</h3>";
-        accountEmailService.sendMail( "549400987@qq.com", subject, htmlText );
+        accountEmailService.sendMail( "QQNumber@qq.com", subject, htmlText );
 
         greenMail.waitForIncomingEmail( 1, 1 );
 
